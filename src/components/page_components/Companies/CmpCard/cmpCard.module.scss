@@ -1,0 +1,35 @@
+@import "/src/theme/mixins/flex.mixins.scss";
+
+.cmpCardWrapper {
+  border-radius: 0.5rem;
+  border: var(--border-primary-thin);
+  background: var(--bg-card-primary);
+  .cardHeader {
+    @include flex-between;
+    border-bottom: var(--border-primary-thin);
+    padding: 1rem;
+  }
+}
+
+.verifyIcon {
+  height: 25px;
+  width: 25px;
+  margin-right: 0.75rem;
+  border-radius: 50%;
+  @include inline-flex-middle;
+}
+
+.detailWrapper {
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  .detail {
+    padding: 0.5rem 0.75rem;
+    @include inline-flex-middle;
+    i {
+      font-size: 1.5rem;
+    }
+  }
+}

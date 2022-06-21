@@ -1,0 +1,10 @@
+@import "/src/theme/mixins/flex.mixins.scss";
+
+.authPageWrapper {
+  @include flex-middle;
+  height: 100vh;
+}
+
+.authFormCard {
+  min-width: 40rem;
+}

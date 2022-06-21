@@ -1,0 +1,11 @@
+@import "/src/theme/mixins/size.mixins.scss";
+
+.inputWrapper {
+  padding-top: 0.25rem;
+  margin-top: 1.5rem;
+  display: block ;
+}
+.input {
+  @include size-inputs;
+  padding: 1rem;
+}

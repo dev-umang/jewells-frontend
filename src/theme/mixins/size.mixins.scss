@@ -1,0 +1,20 @@
+@mixin size-inputs {
+  &.full {
+    width: 100%;
+  }
+  &.xs {
+    width: var(--size-input-xs);
+  }
+  &.sm {
+    width: var(--size-input-sm);
+  }
+  &.md {
+    width: var(--size-input-md);
+  }
+  &.lg {
+    width: var(--size-input-lg);
+  }
+  &.xl {
+    width: var(--size-input-xl);
+  }
+}

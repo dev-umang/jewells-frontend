@@ -1,0 +1,15 @@
+.darkBlue {
+  // Reusable Colors
+  --color-primary: #030b17;
+  --color-secondary: #0a1930;
+  --color-primary-alpha: #1d2f4a84;
+  --color-contrast: #00caef;
+  --color-text-primary: #fcfcfc;
+
+  // Specific Colors
+  --bg-body: var(--color-primary);
+  --bg-contrast: var(--color-contrast);
+  --text-primary: var(--color-text-primary);
+  --bg-card-primary: var(--color-secondary);
+  --border-primary-thin: 1px solid var(--color-primary-alpha);
+}

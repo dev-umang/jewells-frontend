@@ -7,8 +7,6 @@ const SelectorCompanies = selector<CompanyDTO[]>({
   get: async () => {
     const { getAllCompanies } = CompanyService();
     const companies = await getAllCompanies();
-    console.log({ companies });
-
     return companies;
   },
 });

@@ -9,6 +9,12 @@
     border-bottom: var(--border-primary-thin);
     padding: 1rem;
   }
+  .cardBody {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0.5rem;
+  }
 }
 
 .verifyIcon {
@@ -21,7 +27,7 @@
 
 .detailWrapper {
   font-size: 1.25rem;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

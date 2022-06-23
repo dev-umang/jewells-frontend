@@ -22,7 +22,7 @@ const LoginPage: NextPage = () => {
   const onLogin = async () => {
     console.log({ inputs });
     const res = await login(inputs);
-    console.log(res);
+    console.log(res?.status);
 
     if (res?.data) {
       router.push(ROUTES.COMPANIES);

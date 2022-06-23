@@ -14,8 +14,6 @@ const CompaniesPage: NextPage = () => {
   const allCmps = useRecoilValueLoadable(AtomCompanies);
   const router = useRouter();
 
-  console.log({ all: allCmps.contents });
-
   return (
     <div>
       <Head>

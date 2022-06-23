@@ -2,6 +2,7 @@ export const ROUTES = {
   REGISTER: "/auth/register",
   LOGIN: "/auth/login",
   COMPANIES: "/companies",
-  CREATE_COMPANIES: "/create-company",
-  UPDATE_COMPANY: "/update-company",
+  COMPANY: "/company",
+  CREATE_COMPANIES: "/companies/create",
+  UPDATE_COMPANY: "/companies/update",
 };

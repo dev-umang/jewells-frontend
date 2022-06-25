@@ -10,6 +10,7 @@ import { useRecoilValue } from "recoil";
 import { AtomUser } from "src/store/auth/auth.store";
 import { ROUTES } from "src/common/routes/main.routes";
 import FullLoader from "@/shared/Loaders/FullLoader/fullLoader.component";
+import CompanyLayout from "./company.layout";
 
 interface AppLayoutProps {
   children: JSX.Element;
@@ -24,15 +25,18 @@ const AppLayout: FC<AppLayoutProps> = memo(({ children }) => {
     if (user === null) router.push(ROUTES.LOGIN);
   }, [user]);
 
-  const isAuth = useRouter().pathname.startsWith("/auth");
+  const isAuth = router.pathname.startsWith("/auth");
+  const isCmp = router.pathname.startsWith(ROUTES.COMPANIES);
   if (isAuth) return <AuthLayout>{children}</AuthLayout>;
   if (user === undefined) return <FullLoader />;
-  return (
-    <div className={`${dark.darkBlue} ${layout.desktopLayout}`}>
-      <Header />
-      <main className={styles.contentWrapper}>{children}</main>
-    </div>
-  );
+  if (isCmp)
+    return (
+      <div className={`${dark.darkBlue} ${layout.desktopLayout}`}>
+        <Header />
+        <main className={styles.contentWrapper}>{children}</main>
+      </div>
+    );
+  return <CompanyLayout>{children}</CompanyLayout>;
 });
 
 AppLayout.displayName = "AppLayout";

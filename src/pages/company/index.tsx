@@ -13,7 +13,7 @@ const CmpManagePage: NextPage = () => {
         <title>Jewellls - Company Management</title>
       </Head>
 
-      <div className="container p-3">
+      <div className=" p-3">
         <Button
           label="Back To Companies"
           onClick={() => router.push(ROUTES.COMPANIES)}

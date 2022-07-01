@@ -21,7 +21,7 @@ const CmpCard: FC<CmpCardProps> = memo(({ cmp }) => {
   };
 
   const onManageClick = () => {
-    router.push(`${ROUTES.COMPANY}/${cmp.company_id}`);
+    router.push(`/${ROUTES.COMPANY}`);
   };
 
   return (

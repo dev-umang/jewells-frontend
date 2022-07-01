@@ -1,3 +1,4 @@
+import PurchaseForm from "@/pageCom/PurchaseComponents/purchaseForm.component";
 import type { NextPage } from "next";
 import Head from "next/head";
 
@@ -9,7 +10,7 @@ const PurchasePage: NextPage = () => {
       </Head>
 
       <div className="pageWrapper">
-        PURCHASE
+        <PurchaseForm />
       </div>
     </div>
   );

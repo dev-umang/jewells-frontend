@@ -5,7 +5,8 @@ export const AuthService = () => {
   //   Called on login button click
   const login = async (userCreds: any) => {
     const _csrf = await getCSRF();
-
+  
+    
     if (_csrf.headers) {
       const res = await api.post("/login", userCreds);
       console.log({ data: res.data });

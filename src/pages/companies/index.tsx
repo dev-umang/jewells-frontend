@@ -14,8 +14,6 @@ const CompaniesPage: NextPage = () => {
   const allCmps = useRecoilValueLoadable(AtomCompanies);
   const router = useRouter();
 
-  console.log({ all: allCmps.contents });
-
   return (
     <div>
       <Head>
@@ -34,7 +32,7 @@ const CompaniesPage: NextPage = () => {
         <div className=" row  mx-auto">
           {allCmps.state === "hasValue" &&
             allCmps.contents?.map((cmp: CompanyDTO) => {
-              return <CmpCard cmp={cmp} key={cmp.company_id} />;
+              return <CmpCard cmp={cmp} key={cmp.id} />;
             })}
         </div>
       </div>

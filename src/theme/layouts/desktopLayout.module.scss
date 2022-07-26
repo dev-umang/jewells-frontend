@@ -1,6 +1,6 @@
 .desktopLayout {
   // Heights
-  --height-header: 3rem;
+  --height-header: 5rem;
 
   // Sizess
   --size-input-xs: 10rem;
@@ -8,4 +8,7 @@
   --size-input-md: 25rem;
   --size-input-lg: 30rem;
   --size-input-xl: 40rem;
+
+  // Widths 
+  --width-sidebar-collapsed: 5rem;
 }

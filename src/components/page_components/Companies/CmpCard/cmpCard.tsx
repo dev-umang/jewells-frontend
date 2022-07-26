@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { Button } from "primereact/button";
 import { FC, memo } from "react";
 import { useRecoilState } from "recoil";
+import api from "src/common/config/api.config";
 import { ROUTES } from "src/common/routes/main.routes";
 import { CompanyDTO } from "src/models/compay.model";
 import { AtomEditableCompany } from "src/store/auth/company.store";
@@ -15,14 +16,26 @@ const CmpCard: FC<CmpCardProps> = memo(({ cmp }) => {
   const [selectedCmp, setSelectedCmp] = useRecoilState(AtomEditableCompany);
   const router = useRouter();
 
-  const onCardClick = () => {
+  const onCmpEditClick = () => {
     setSelectedCmp(cmp);
     router.push(ROUTES.UPDATE_COMPANY);
   };
 
+  const onManageClick = () => {
+    api
+      .post("/api/companies/switch_company", { id: cmp.id })
+      .then((res) => {
+        console.log(res.data);
+        if (res.data.status === "error") return;
+        router.push(`/${ROUTES.COMPANY}`);
+      })
+      .catch((err) => {
+        console.log({ switch_cmp_err0r: err });
+      });
+  };
+
   return (
     <div
-      onClick={onCardClick}
       className={`${styles.cmpCardWrapper} p-0 col-12 col-lg-4 col-xl-4 col-md-6 col-sm-12 col-xs-12 m-2`}
     >
       <div className={styles.cardHeader}>
@@ -43,6 +56,7 @@ const CmpCard: FC<CmpCardProps> = memo(({ cmp }) => {
             icon="pi pi-pencil"
             className="p-button-rounded p-button-info p-button-text mr-3"
             aria-label="Edit"
+            onClick={onCmpEditClick}
           />
           <Button
             style={{ height: "25px", width: "25px" }}
@@ -64,6 +78,9 @@ const CmpCard: FC<CmpCardProps> = memo(({ cmp }) => {
           <div className={styles.detail}>
             <i className="pi pi-map mr-3"></i> {cmp.address}
           </div>
+        </div>
+        <div>
+          <Button onClick={onManageClick} label="Manage" />
         </div>
       </div>
     </div>

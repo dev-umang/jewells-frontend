@@ -1,0 +1,27 @@
+.sidebarWrapper {
+  background: var(--bg-sidebar);
+  border-top: var(--border-primary-thin);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: var(--width-sidebar-collapsed);
+}
+
+.sidebarButton {
+  padding: 0.5rem;
+  width: 100%;
+  display: inline-block;
+  color: var(--text-primary);
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  height: var(--width-sidebar-collapsed);
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background: var(--hover-sidebar-btn);
+  }
+}

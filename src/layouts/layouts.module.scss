@@ -1,11 +1,17 @@
-
-
 .authSection,
 .contentWrapper {
   background: var(--bg-body);
   color: var(--text-primary);
   height: calc(100vh - var(--height-header));
+  overflow: auto;
 }
 .authSection {
   height: 100vh;
+}
+
+.partition {
+  display: flex;
+  .contentWrapper {
+    flex-grow: 1;
+  }
 }

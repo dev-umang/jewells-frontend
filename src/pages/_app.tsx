@@ -7,6 +7,7 @@ import "primeicons/primeicons.css";
 import "/node_modules/primeflex/primeflex.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/globals.scss";
+import "../styles/uk.framework.scss";
 import { RecoilRoot } from "recoil";
 import AppLayout from "../layouts/app.layout";
 import Head from "next/head";

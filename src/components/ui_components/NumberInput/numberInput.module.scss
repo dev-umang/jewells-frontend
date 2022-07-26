@@ -1,0 +1,13 @@
+@import "/src/theme/mixins/size.mixins.scss";
+
+.inputWrapper {
+  .label {
+    font-size: 0.9rem;
+    padding-left: 0.75rem;
+    color: #d4d4ff;
+  }
+}
+.input {
+  @include size-inputs;
+  width: 100%;
+}

@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { Button } from "primereact/button";
 import { FC, memo } from "react";
 import { useRecoilState } from "recoil";
+import api from "src/common/config/api.config";
 import { ROUTES } from "src/common/routes/main.routes";
 import { CompanyDTO } from "src/models/compay.model";
 import { AtomEditableCompany } from "src/store/auth/company.store";
@@ -21,7 +22,16 @@ const CmpCard: FC<CmpCardProps> = memo(({ cmp }) => {
   };
 
   const onManageClick = () => {
-    router.push(`/${ROUTES.COMPANY}`);
+    api
+      .post("/api/companies/switch_company", { id: cmp.id })
+      .then((res) => {
+        console.log(res.data);
+        if (res.data.status === "error") return;
+        router.push(`/${ROUTES.COMPANY}`);
+      })
+      .catch((err) => {
+        console.log({ switch_cmp_err0r: err });
+      });
   };
 
   return (

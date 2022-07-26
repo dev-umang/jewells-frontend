@@ -1,14 +1,13 @@
 export interface CompanyDTO {
   address: string;
-  company_id: string;
   created_at: string;
   created_by: 1;
   date_of_establishment: string;
   deleted_at?: string;
   email: string;
   gst_number: string;
-  id: 1;
-  is_approved: 0;
+  id: number;
+  is_approved: number;
   l_p?: string;
   logo?: string;
   logo_full?: string;

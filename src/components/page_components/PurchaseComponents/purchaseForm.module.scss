@@ -8,3 +8,36 @@
   column-gap: 1rem;
   row-gap: 1rem;
 }
+.checkboxWrapper {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0 1rem 0;
+  .checkLabel {
+    padding-left: 0.75rem;
+  }
+}
+.billsWrapper {
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  .billsBtn {
+    height: 75px;
+    width: 75px;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 0;
+  label {
+    padding: 0 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+}

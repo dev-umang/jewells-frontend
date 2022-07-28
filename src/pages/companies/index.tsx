@@ -13,7 +13,8 @@ import { AtomCompanies } from "src/store/auth/company.store";
 const CompaniesPage: NextPage = () => {
   const allCmps = useRecoilValueLoadable(AtomCompanies);
   const router = useRouter();
-
+  console.log({allCmps: allCmps.contents});
+  
   return (
     <div>
       <Head>

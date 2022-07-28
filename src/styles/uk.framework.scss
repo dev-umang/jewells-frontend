@@ -5,3 +5,9 @@
 .ukDropdown {
   width: 100%;
 }
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 1rem;
+  row-gap: 1rem;
+}

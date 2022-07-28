@@ -1,7 +1,5 @@
 import UkCard from "@/ui/UkCard/ukCard.component";
-import { Card } from "primereact/card";
-import { Fieldset } from "primereact/fieldset";
-import React, { FC, memo } from "react";
+import { FC, memo } from "react";
 import styles from "./purchaseForm.module.scss";
 import { Dropdown } from "primereact/dropdown";
 interface SupplierInfoProps {}
